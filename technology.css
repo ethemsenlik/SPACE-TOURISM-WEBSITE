@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(background-technology-desktop.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+.navbar .line {
+    width: 500px;
+    margin-left: 50px;
+    margin-top: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.326)  ;
+}
+
+.menu {
+    width: 60%;
+    backdrop-filter: blur(100px);
+    margin-top: 35px;
+    background-color: rgba(240, 248, 255, 0.056);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.menu ul li a {
+    color: white;
+    font-size: smaller;
+}
+
+.menu ul li a span {
+    color: white;
+}
+
+.section .header h1 {
+    margin-bottom: 100px;
+    color: rgba(255, 255, 255, 0.715);
+    position: absolute;
+    top: 170px;
+    left: 150px;
+    line-height: 200%;
+}
+
+.section h1 span {
+    color: rgba(255, 255, 255, 0.297);
+    margin-right: 15px;
+}
+
+.buttons {
+    width: 100px;
+}
+
+.buttons .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.buttons .circle a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    padding-top: 23px;
+    font-size: 25px;
+}
+
+.articles {
+    display: flex;
+    margin-top: 200px;
+    margin-left: 145px;
+}
+
+.article {
+    margin-right: 50px;
+}
+
+.article2 {
+    color: rgba(255, 255, 255, 0.715);
+    line-height: 200%;
+}
+
+.article2Img {
+    position: absolute;
+    top: 170px;
+    left: 920px;
+}

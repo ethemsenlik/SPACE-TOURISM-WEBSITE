@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="technology.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div class="line">
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html"><span><b>00 </b></span>HOME</a></li>
+                <li><a href="destination.html"><span><b>01 </b></span>DESTINATION</a></li>
+                <li><a href="crew.html"><span><b>02 </b></span>CREW</a></li>
+                <li><a href="technology.html"><span><b>03 </b></span>TECHNOLOGY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div class="articles">
+            <div class="article">
+                <div class="header">
+                    <h1><span>03 </span>SPACE LAUNGE 101</h1>
+                </div>
+                <div class="buttons">
+                    <div class="circle" id="circle1">
+                        <a href="#">1</a>
+                    </div>
+                    <div class="circle" id="circle2">
+                        <a href="#">2</a>
+                    </div>
+                    <div class="circle" id="circle3">
+                        <a href="#">3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="article2">
+                <h3 id="headingMini">THE TERMINOLOGY</h3><br>
+                <h1 id="heading">LAUNGE VEHICLE</h1><br>
+                <p id="text">
+                    A launch vehicle or carrier rocket is a rocket-propelled vehicle <br>
+                    used to carry a payload from Earth's surface to space, usually to <br>
+                    Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in <br>
+                    operation. Standing 150 metres tall, it's quite an awe-inspiring <br>
+                    sight on the launch pad!
+                </p>
+            </div>
+        </div>
+        <div class="article2Img">
+            <img id="article2Img" src="image-launch-vehicle-portrait.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        let circle1 = document.getElementById("circle1");
+        let circle2 = document.getElementById("circle2");
+        let circle3 = document.getElementById("circle3");
+        let headingMini = document.getElementById("headingMini");
+        let heading = document.getElementById("heading");
+        let text = document.getElementById("text");
+        let article2Img = document.getElementById("article2Img");
+        let img;
+
+        circle1.addEventListener("click", circletext1);
+        circle2.addEventListener("click", circletext2);
+        circle3.addEventListener("click", circletext3);
+
+        function circletext1 () {
+            circle1.style.backgroundColor = "white";
+            circle2.style.backgroundColor = "";
+            circle3.style.backgroundColor = "";
+
+            img = document.getElementById("article2Img").src = "image-launch-vehicle-portrait.jpg"
+
+            document.getElementById("headingMini").innerHTML = `THE TERMINOLOGY<br>`;
+            document.getElementById("heading").innerHTML = `LAUNGE VEHICLE<br>`
+            document.getElementById("text").innerHTML = `A launch vehicle or carrier rocket is a rocket-propelled vehicle <br>
+                                                        used to carry a payload from Earth's surface to space, usually to <br>
+                                                        Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in <br>
+                                                        operation. Standing 150 metres tall, it's quite an awe-inspiring <br>
+                                                        sight on the launch pad!`
+        }
+
+        function circletext2 () {
+            circle2.style.backgroundColor = "white";
+            circle1.style.backgroundColor = "";
+            circle3.style.backgroundColor = "";
+
+            img = document.getElementById("article2Img").src = "image-space-capsule-portrait.jpg"
+
+            document.getElementById("headingMini").innerHTML = `THE TERMINOLOGY<br>`;
+            document.getElementById("heading").innerHTML = `CAPSULE<br>`
+            document.getElementById("text").innerHTML = `Space capsule A space capsule is an often-crewed spacecraft that uses a <br>
+                                                        blunt-body reentry capsule to reenter the Earth's atmosphere without wings. <br>
+                                                        Our capsule is where you'll spend your time during the flight. It includes a <br>
+                                                        space gym, cinema, and plenty of other activities to keep you entertained.`
+        }
+
+        function circletext3 () {
+            circle3.style.backgroundColor = "white";
+            circle2.style.backgroundColor = "";
+            circle1.style.backgroundColor = "";
+
+            img = document.getElementById("article2Img").src = "image-spaceport-portrait.jpg"
+            
+            document.getElementById("headingMini").innerHTML = `THE TERMINOLOGY<br>`;
+            document.getElementById("heading").innerHTML = `SPACEPORT<br>`
+            document.getElementById("text").innerHTML = `Spaceport A spaceport or cosmodrome is a site for launching (or receiving) <br>
+                                                        spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in <br>
+                                                        the famous Cape Canaveral, our spaceport is ideally situated to take advantage of <br>
+                                                        the Earth’s rotation for launch.`
+        }
+    </script>
+
+    <script>
+        window.sr=ScrollReveal();
+
+        sr.reveal(".article2Img",{
+            origin:"bottom",
+            duration:1000,
+            distance:"25rem",
+            delay:300
+        })
+
+        sr.reveal(".article2,.buttons",{
+            origin:"top",
+            duration:1000,
+            distance:"25rem",
+            delay:600
+        })
+    </script>
+</body>

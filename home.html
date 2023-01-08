@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div class="line">
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html"><span><b>00 </b></span>HOME</a></li>
+                <li><a href="destination.html"><span><b>01 </b></span>DESTINATION</a></li>
+                <li><a href="crew.html"><span><b>02 </b></span>CREW</a></li>
+                <li><a href="technology.html"><span><b>03 </b></span>TECHNOLOGY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div class="article">
+            <h3>SO, YOU WANT TO TRAVEL TO</h3><br><br>
+            <h1 id="space">SPACE</h1><br><br>
+            <p> 
+                Let's face it; if you want to go to space, you might as well <br> genuinely go to outer
+                space and not hower kind of on the <br> edge of it. Well sit back and relax because we'll give you <br> a truly out of this world experiance!
+            </p>
+        </div>
+        <div class="explore">
+            <h1>EXPLORE</h1>
+        </div>
+    </div>
+
+    <script>
+        window.sr=ScrollReveal();
+
+        sr.reveal(".explore",{
+            origin:"right",
+            duration:1000,
+            distance:"25rem",
+            delay:300
+        })
+
+        sr.reveal(".article",{
+            origin:"left",
+            duration:1000,
+            distance:"25rem",
+            delay:600
+        })
+    </script>
+</body>
+</html>

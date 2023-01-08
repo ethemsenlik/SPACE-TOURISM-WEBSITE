@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="destination.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div class="line">
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html"><span><b>00 </b></span>HOME</a></li>
+                <li><a href="destination.html"><span><b>01 </b></span>DESTINATION</a></li>
+                <li><a href="crew.html"><span><b>02 </b></span>CREW</a></li>
+                <li><a href="technology.html"><span><b>03 </b></span>TECHNOLOGY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="header">
+                <h1><span>01 </span>PICK YOUR DESTINATION</h1>
+            </div>
+            <div class="planetImg">
+                <img id="planetImg" src="image-moon.png" alt="">
+            </div>
+        </div>
+        <div class="aside">
+            <div class="menu-planet">
+                <ul>
+                    <li id="moon"><a href="#"></a>MOON</li>
+                    <li id="mars"><a href="#"></a>MARS</li>
+                    <li id="europa"><a href="#"></a>EUROPA</li>
+                    <li id="titan"><a href="#"></a>TITAN</li>
+                </ul>
+            </div><br>
+            <div class="planet-info">
+                <h1 id="planet-header">MOON</h1><br>
+                <p id="planet-text">
+                    Moon See our planet as you’ve never seen it before. A perfect relaxing <br>
+                    trip away to help regain perspective and come back refreshed. While you’re there, <br>
+                    take in some history by visiting the Luna 2 and Apollo 11 landing sites. <br> 
+                </p><br><br>
+                <div class="outline">
+
+                </div>
+                <div class="moon-info">
+                    <div class="distance" id="planet-distance">
+                        <h2>AVG. DISTANCE</h2>
+                        <h1 id="moon-info"><b>384,400 km</b></h1>
+                    </div>
+                    <div class="travelTime">
+                        <h2>EST. TRAVEL TIME</h2>
+                        <h1 id="moon-info2"><b>3 DAYS</b></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let moon = document.getElementById("moon");
+        let mars = document.getElementById("mars");
+        let europa = document.getElementById("europa");
+        let titan = document.getElementById("titan");
+        let planetHeader = document.getElementById("planet-header");
+        let planetText = document.getElementById("planet-text");
+        let moonInfo = document.getElementById("moon-info");
+        let moonInfo2 = document.getElementById("moon-info2");
+        let planetImg ;
+
+        moon.addEventListener("click", moonFunction);
+        mars.addEventListener("click", marsFunction);
+        europa.addEventListener("click", europaFunction);
+        titan.addEventListener("click", titanFunction);
+
+        function moonFunction() {
+            planetHeader.innerHTML = "MOON";
+            planetText.innerHTML = `Moon See our planet as you’ve never seen it before. A perfect relaxing <br>
+                                    trip away to help regain perspective and come back refreshed. While you’re there, <br>
+                                    take in some history by visiting the Luna 2 and Apollo 11 landing sites. <br>`
+            moonInfo.innerHTML = "384,400 km"
+            moonInfo2.innerHTML = "3 DAYS"
+
+            planetImg = document.getElementById("planetImg").src = "image-moon.png";
+        }
+
+        function marsFunction() {
+            planetHeader.innerHTML = "MARS";
+            planetText.innerHTML = `Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus <br>
+                                    Mons, the tallest planetary mountain in our solar system. It’s two and a half times <br>
+                                    the size of Everest!`
+            moonInfo.innerHTML = "225 mil. km"
+            moonInfo2.innerHTML = "9 MONTHS"
+            
+            planetImg = document.getElementById("planetImg").src = "image-mars.png";
+        }
+
+        function europaFunction() {
+            planetHeader.innerHTML = "EUROPA";
+            planetText.innerHTML = `The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter <br>
+                                    lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, <br>
+                                    hockey, or simple relaxation in your snug wintery cabin.`
+            moonInfo.innerHTML = "628 mil. km"
+            moonInfo2.innerHTML = "3 years"
+
+            planetImg = document.getElementById("planetImg").src = "image-europa.png";
+        }
+
+        function titanFunction() {
+            planetHeader.innerHTML = "TITAN";
+            planetText.innerHTML = ` The only moon known to have a dense atmosphere other than Earth, Titan is a home <br>
+                                    away from home (just a few hundred degrees colder!). As a bonus, you get striking views <br>
+                                    of the Rings of Saturn.`
+            moonInfo.innerHTML = "1.6 bil. km"
+            moonInfo2.innerHTML = "7 years"
+
+            planetImg = document.getElementById("planetImg").src = "image-titan.png";
+        }
+    </script>
+
+    <script>
+        window.sr=ScrollReveal();
+
+        sr.reveal(".planetImg",{
+            origin:"left",
+            duration:1000,
+            distance:"25rem",
+            delay:600
+        })
+
+        sr.reveal(".aside",{
+            origin:"right",
+            duration:1000,
+            distance:"25rem",
+            delay:300
+        })
+    </script>
+</body>

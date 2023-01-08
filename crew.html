@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crew.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div class="line">
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html"><span><b>00 </b></span>HOME</a></li>
+                <li><a href="destination.html"><span><b>01 </b></span>DESTINATION</a></li>
+                <li><a href="crew.html"><span><b>02 </b></span>CREW</a></li>
+                <li><a href="technology.html"><span><b>03 </b></span>TECHNOLOGY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="header">
+                <h1><span>02 </span>MEET YOUR CREW</h1><br>
+            </div>
+            <div class="personal-info">
+                <h1 id="personal-job">FLIGHT ENGINEER</h1><br>
+                <h1 id="personal-name">ANOUSHEH ANSARI</h1><br>
+                <p id="personal-info">
+                    Anousheh Ansari is an Iranian American engineer and co-founder <br>
+                    of Prodea Systems. Ansari was the fourth self-funded space tourist, the <br>
+                    first self-funded woman to fly to the ISS, and the first Iranian in space.
+                </p>
+            </div>
+            <div class="slider-crew">
+                <div class="crews">
+                    <div id="crew1">
+                        <a href="#"></a>
+                    </div>
+                    <div id="crew2">
+                        <a href="#"></a>
+                    </div>
+                    <div id="crew3">
+                        <a href="#"></a>
+                    </div>
+                    <div id="crew4">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aside">
+            <img id="aside" src="image-anousheh-ansari.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        let personalJob = document.getElementById("personal-job");
+        let personalName = document.getElementById("personal-name");
+        let personalInfo = document.getElementById("personal-info");
+        let crew1 = document.getElementById("crew1");
+        let crew2 = document.getElementById("crew2");
+        let crew3 = document.getElementById("crew3");
+        let crew4 = document.getElementById("crew4");
+        let asideImg = document.getElementById("aside");
+        let image;
+
+        crew1.addEventListener("click", functionCrew1);
+        crew2.addEventListener("click", functionCrew2);
+        crew3.addEventListener("click", functionCrew3);
+        crew4.addEventListener("click", functionCrew4);
+
+        function functionCrew1 () {
+            crew1.style.backgroundColor = "white";
+            crew2.style.backgroundColor = "";
+            crew3.style.backgroundColor = "";
+            crew4.style.backgroundColor = "";
+
+            image = document.getElementById("aside").src='image-anousheh-ansari.png';
+
+            personalJob.innerHTML=`FLIGHT ENGINEER<br>`
+            personalName.innerHTML=`ANOUSHEH ANSARI<br>`
+            personalInfo.innerHTML=`Anousheh Ansari is an Iranian American engineer and co-founder <br>
+                                    of Prodea Systems. Ansari was the fourth self-funded space tourist, the <br>
+                                    first self-funded woman to fly to the ISS, and the first Iranian in space.`
+        }
+
+        function functionCrew2 () {
+            crew2.style.backgroundColor = "white";
+            crew1.style.backgroundColor = "";
+            crew3.style.backgroundColor = "";
+            crew4.style.backgroundColor = "";
+
+            image = document.getElementById("aside").src='image-douglas-hurley.png';
+
+            personalJob.innerHTML=`COMMANDER<br>`
+            personalName.innerHTML=`DOUGLAS HURLEY<br>`
+            personalInfo.innerHTML=`Douglas Gerald Hurley is an American engineer, former Marine Corps <br>
+                                    pilot and former NASA astronaut. He launched into space for the third time <br>
+                                    as commander of Crew Dragon Demo-2.`
+        }
+
+        function functionCrew3 () {
+            crew3.style.backgroundColor = "white";
+            crew2.style.backgroundColor = "";
+            crew1.style.backgroundColor = "";
+            crew4.style.backgroundColor = "";
+
+            image = document.getElementById("aside").src='image-victor-glover.png';
+
+            personalJob.innerHTML=`PILOT<br>`
+            personalName.innerHTML=`VICTOR GLOVER<br>`
+            personalInfo.innerHTML=`Pilot on the first operational flight of the SpaceX Crew Dragon to the International <br>
+                                    Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a <br>
+                                    crew member of Expedition 64, and served as a station systems flight engineer.`
+        }
+
+        function functionCrew4 () {
+            crew4.style.backgroundColor = "white";
+            crew2.style.backgroundColor = "";
+            crew3.style.backgroundColor = "";
+            crew1.style.backgroundColor = "";
+
+            image = document.getElementById("aside").src='image-mark-shuttleworth.png';
+
+            personalJob.innerHTML=`MISSION SPECIALIST<br>`
+            personalName.innerHTML=`MARK SHUTTLEWORTH<br>`
+            personalInfo.innerHTML=`Mark Richard Shuttleworth is the founder and CEO of Canonical, the company <br>
+                                    behind the Linux-based Ubuntu operating system. Shuttleworth became the first <br>
+                                    South African to travel to space as a space tourist.`
+        }
+    </script>
+
+    <script>
+        window.sr=ScrollReveal();
+
+        sr.reveal(".aside",{
+            origin:"right",
+            duration:1000,
+            distance:"25rem",
+            delay:300
+        })
+
+        sr.reveal(".article",{
+            origin:"left",
+            duration:1000,
+            distance:"25rem",
+            delay:600
+        })
+    </script>
+</body>
